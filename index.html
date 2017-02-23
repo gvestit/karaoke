@@ -40,14 +40,14 @@
   </audio>
   <div id="p1" style="display: table;margin: auto;top: 100px;height: 20px;" class="mdl-progress ">
     <div style="display: table;margin: auto;"> 
-      <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">fast_rewind</i> </button> 
-      <button onclick="kitipasa()" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">play_arrow</i> </button>      
-      <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">fast_forward</i> </button> 
-      <button onclick="kitipasa()" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">loop</i> </button>      </div> 
-    <progress id="barTime" value="0" max="281.626122" class="progress"></progress>
+      <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_rewind</i> </button> 
+      <button onclick="kitipasa()" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i id="playArrow" class="material-icons">play_arrow</i> </button>      
+      <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_forward</i> </button> 
+      <button onclick="kitipasa()" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">loop</i> </button>      </div> 
+    <progress id="barTime" value="0" max="281.626122" class="progress mdl-shadow--4dp"></progress>
   <div id="container" style="display: table;margin: auto;padding-top: 50px;">
     <div class="demo-card-wide mdl-card mdl-shadow--8dp" style="width: 700px;height: 400px;">
-      <div class="mdl-card__title">
+      <div class="mdl-card__title" style="display: block;">
         <h2 class="mdl-card__title-text">Títol Canço</h2> </div>
       <div class="mdl-card__supporting-text"> Imatge de fons de la canço i temps actual ?? </div>
       <div id="lletraCanso" style="text-align:center;" class="mdl-card__actions mdl-card--border">

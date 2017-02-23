@@ -46,8 +46,10 @@
    kitipasa = function kitipasa() {
      if(musica.paused){
        musica.play();
+       document.getElementById('playArrow').innerHTML='pause';
        progressBar.setAttribute('max', musica.duration);
      }else{
+        document.getElementById('playArrow').innerHTML='play_arrow';
        musica.pause();
      }
      pasa=true;

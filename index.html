@@ -21,12 +21,22 @@
       color:rgba(0,0,0,.26);
       font-weight:bold;
     }
+    .progress {
+      background-color: #f3f3f3;
+      border: 0;
+      height: 18px;
+      border-radius: 9px;
+      width: 600px;
+      display: table;
+      margin:auto;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
   <audio id="despacito">
-    <source src="music/despacito.mp3" type="audio/mp3">
+    <source src="music/Luis Fonsi - Despacito ft. Daddy Yankee.mp3" type="audio/mp3">
   </audio>
   <div id="p1" style="display: table;margin: auto;top: 100px;height: 20px;" class="mdl-progress ">
     <div style="display: table;margin: auto;"> 
@@ -34,8 +44,8 @@
       <button onclick="kitipasa()" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">play_arrow</i> </button>      
       <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">fast_forward</i> </button> 
       <button onclick="kitipasa()" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--"> <i class="material-icons">loop</i> </button>      </div> 
-    <input id="barTime" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="0" tabindex="0"> </div>
-  <div id="container" style="display: table;margin: auto;padding-top: 100px;">
+    <progress id="barTime" value="0" max="281.626122" class="progress"></progress>
+  <div id="container" style="display: table;margin: auto;padding-top: 50px;">
     <div class="demo-card-wide mdl-card mdl-shadow--8dp" style="width: 700px;height: 400px;">
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Títol Canço</h2> </div>
@@ -47,7 +57,7 @@
           <label id="placeholder" class="mdl-textfield__label" for="sample3">Test prova 1, 2, 3</label> 
         </div>
       </div>
-      <div class="mdl-card__menu"> ALGU PER AKI? </div>
+      <div id="timing"class="mdl-card__menu"> ALGU PER AKI? </div>
     </div>
   </div>
   <script src="js/motor.js"></script>

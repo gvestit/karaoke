@@ -38,14 +38,15 @@
  var kitipasa;
  var pasa = false;
  var width = 0;
- 
+ var musica = document.getElementById('despacito');
+ var progressBar = document.getElementById('barTime');
+ var time= document.getElementById('timing');
  window.onload = function() {
-   var musica = document.getElementById('despacito');
-   var progressBar = document.getElementById('barTime');
+   
    kitipasa = function kitipasa() {
      if(musica.paused){
        musica.play();
-       progressBar.setAttribute('max', parseInt(musica.duration));
+       progressBar.setAttribute('max', musica.duration);
      }else{
        musica.pause();
      }
@@ -69,7 +70,7 @@
    }
 
    function animateWidth() {
-
+    if(!musica.paused){
      var inputC = document.getElementById('printLetter');
      width = width + 1;
      inputC.style.width = width + "px";
@@ -78,9 +79,12 @@
        width = 0;
        pasa = false;
      }
+    }
+     
    }
 
    function phraseForward() {
+    if(!musica.paused){
      var frases = document.getElementsByClassName("comuna");
      console.log(frases);
      for (var i = 0; i < frases.length; i++) {
@@ -96,16 +100,24 @@
          pasa = true;
        }
      }
+    }
+     
    }
-   //AKI HI PASAREM EL TEMPS DE CANVIAR DE LINIA ☻
-   setInterval(phraseForward, 10000);
-   //AKI HI PASAREM EL TEMPS DE PINTAR
-   setInterval(animateWidth, 20);
    function colorirBarra(){
-     if(!musica.paused){
-       progressBar.setAttribute('value',musica.currentTime);
-     }
+    if(!musica.paused){
+     progressBar.setAttribute('value', musica.currentTime);
+     time.innerHTML='0'+(musica.currentTime/60).toFixed(2)+' - 0'+(musica.duration/60).toFixed(2);
+    }
    }
-   setInterval(colorirBarra);
-
+   
+    progressBar.addEventListener("click", function(event){
+      var duration = musica.duration;
+      var posCanso = event.offsetX / this.offsetWidth  * duration ;
+      musica.currentTime = posCanso;
+    });
+    //AKI HI PASAREM EL TEMPS DE CANVIAR DE LINIA ☻
+    setInterval(phraseForward, 10000);
+    //AKI HI PASAREM EL TEMPS DE PINTAR
+    setInterval(animateWidth, 20);
+    setInterval(colorirBarra);
  }

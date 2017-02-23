@@ -38,10 +38,17 @@
  var kitipasa;
  var pasa = false;
  var width = 0;
- var musica = document.getElementById('despacito');
- var progressBar = document.getElementById('barTime');
+ 
  window.onload = function() {
+   var musica = document.getElementById('despacito');
+   var progressBar = document.getElementById('barTime');
    kitipasa = function kitipasa() {
+     if(musica.paused){
+       musica.play();
+       progressBar.setAttribute('max', parseInt(musica.duration));
+     }else{
+       musica.pause();
+     }
      pasa=true;
      var phrase = document.getElementById('test');
      phrase.value = canso[0].lletra;
@@ -94,5 +101,11 @@
    setInterval(phraseForward, 10000);
    //AKI HI PASAREM EL TEMPS DE PINTAR
    setInterval(animateWidth, 20);
+   function colorirBarra(){
+     if(!musica.paused){
+       progressBar.setAttribute('value',musica.currentTime);
+     }
+   }
+   setInterval(colorirBarra);
 
  }

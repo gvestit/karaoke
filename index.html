@@ -8,104 +8,7 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <style>
-    .stil {
-      font-family: verdana;
-      font-size: 18px;
-      font-weight: bold;
-      color:black;
-    }
-    .test1{
-      font-family: verdana;
-      font-size: 18px;
-      color:rgba(0,0,0,.26);
-      font-weight:bold;
-    }
-    .progress {
-      background-color: #f3f3f3;
-      border: 0;
-      height: 18px;
-      border-radius: 9px;
-      width: 600px;
-      display: table;
-      margin:auto;
-      margin-top: 20px;
-    }
-    body {
-  margin: 0;
-  background: #000; 
-}
-video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-.stopfade { 
-   opacity: .5;
-}
-
-#polina { 
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100; 
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 2rem;
-  width: 33%;
-  margin:2rem;
-  float: right;
-  font-size: 1.2rem;
-}
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#polina button { 
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none; 
-  margin: 1rem auto; 
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px; 
-  cursor: pointer;
-  transition: .3s background;
-}
-#polina button:hover { 
-   background: rgba(0,0,0,0.5);
-}
-
-a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  background:rgba(0,0,0,0.5);
-  padding: .5rem;
-  transition: .6s background; 
-}
-a:hover{
-  background:rgba(0,0,0,0.9);
-}
-@media screen and (max-width: 500px) { 
-  div{width:70%;} 
-}
-@media screen and (max-device-width: 800px) {
-  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-}
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/ourCss.css">
 </head>
 
 <body>
@@ -119,16 +22,19 @@ a:hover{
       <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_forward</i> </button> 
       <button  id="restart" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">loop</i> </button>      </div> 
     <progress id="barTime" value="0" max="281.626122" class="progress mdl-shadow--4dp"></progress>
+    <div id="placeBarTime" class="mdl-tooltip" for="barTime">
+    
+    </div>
   <div id="container" style="display: table;margin: auto;padding-top: 50px;">
     <div class="demo-card-wide mdl-card mdl-shadow--8dp" style="width: 700px;height: 400px;">
       <div class="mdl-card__title" style="display: block;">
         <h2 class="mdl-card__title-text">Títol Canço</h2> </div>
       <div class="mdl-card__supporting-text"> Imatge de fons de la canço i temps actual ?? </div>
       <div id="lletraCanso" style="text-align:center;" class="mdl-card__actions mdl-card--border">
-        <div id="actualFrase" class="stil mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
-          <input disabled id="test" style="position:absolute;" class="test1 mdl-textfield__input" type="text" id="sample3"> 
-          <input disabled id="printLetter" style="width: 0px;font-color:blue" value="Test prova 1, 2, 3" class="stil mdl-textfield__input" type="text" id="sample4">          
-          <label id="placeholder" class="mdl-textfield__label" for="sample3">Test prova 1, 2, 3</label> 
+        <div id="actualFrase" style="width: 500px;" class="stil mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
+          <input disabled id="test" style="position:absolute;width: 500px;text-align:center;" class="test1 mdl-textfield__input" type="text" id="sample3"> 
+          <input disabled id="printLetter" style="width: 0px; text-align:center;" value="Test prova 1, 2, 3" class="stil mdl-textfield__input" type="text" id="sample4">          
+          <label id="placeholder" style="text-align:center;"class="mdl-textfield__label" for="sample3">Test prova 1, 2, 3</label> 
         </div>
       </div>
       <div id="timing"class="mdl-card__menu"> ALGU PER AKI? </div>

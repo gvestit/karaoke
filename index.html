@@ -12,14 +12,16 @@
 </head>
 
 <body>
-  <audio id="despacito">
+  <audio ontimeupdate="test()" id="despacito">
     <source src="music/Luis Fonsi - Despacito ft. Daddy Yankee.mp3" type="audio/mp3">
   </audio>
   <div id="p1" style="display: table;margin: auto;top: 100px;height: 20px;" class="mdl-progress ">
+   
     <div style="display: table;margin: auto;"> 
-      <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_rewind</i> </button> 
+       <a href="menu.html">MENU TEST</a>
+      <button  id="rewind" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_rewind</i> </button> 
       <button  id="playArrow" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i id="jeje" class="material-icons">play_arrow</i> </button>      
-      <button style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_forward</i> </button> 
+      <button  id="forward" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_forward</i> </button> 
       <button  id="restart" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">loop</i> </button>      </div> 
     <progress id="barTime" value="0" max="281.626122" class="progress mdl-shadow--4dp"></progress>
     <div id="placeBarTime" class="mdl-tooltip" for="barTime">
@@ -32,8 +34,8 @@
       <div class="mdl-card__supporting-text"> Imatge de fons de la canço i temps actual ?? </div>
       <div id="lletraCanso" style="text-align:center;" class="mdl-card__actions mdl-card--border">
         <div id="actualFrase" style="width: 500px;" class="stil mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
-          <input disabled id="test" style="position:absolute;width: 500px;text-align:center;" class="test1 mdl-textfield__input" type="text" id="sample3"> 
-          <input disabled id="printLetter" style="width: 0px; text-align:center;" value="Test prova 1, 2, 3" class="stil mdl-textfield__input" type="text" id="sample4">          
+          <input disabled id="test" style="position:absolute;width: 500px;" class="test1 mdl-textfield__input" type="text" id="sample3"> 
+          <input disabled id="printLetter" style="width: 0px;" value="Test prova 1, 2, 3" class="stil mdl-textfield__input" type="text" id="sample4">          
           <label id="placeholder" style="text-align:center;"class="mdl-textfield__label" for="sample3">Test prova 1, 2, 3</label> 
         </div>
       </div>

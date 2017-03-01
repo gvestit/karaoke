@@ -1,364 +1,67 @@
-//NIVELL DIFICULTAT, 2 EMINEM 
-var canso = [{
-    lletra: '¡Ay!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Fonsi!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡DY!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Oh oh...!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: 'Oh no, oh no...',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Oh!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Yeah...!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Dididiri Daddy!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Go!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Sí, sabes que ya llevo rato mirándote!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Tengo que bailar contigo hoy!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Daddy Yankee!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Vi que tu mirada ya estaba llamándome!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Muéstrame el camino que yo voy (Oh)!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Tú, tú eres el imán y yo soy el metal!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Me voy acercando y voy armando el plan!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Solo con pensarlo se acelera el pulso (Oh yeah)!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Ya, ya me está gustando más de lo normal!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Todos mis sentidos van pidiendo más!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Esto hay que tomarlo sin ningún apuro!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Des-pa-cito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero respirar tu cuello despacito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Deja que te diga cosas al oído!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Para que te acuerdes si no estás conmigo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Des-pa-cito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero desnudarte a besos despacito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Firmo en las paredes de tu laberinto!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Y hacer de tu cuerpo todo un manuscrito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Sube, sube, sube!',
-    temps: 47,
-    tempsPintar: 1
-  },
-  {
-    lletra: '¡Sube, sube!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero ver bailar tu pelo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero ser tu ritmo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Que le enseñes a mi boca!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Tus lugares favoritos!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Déjame sobrepasar tus zonas de peligro!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Hasta provocar tus gritos!',
-    temps: 47,
-    tempsPintar: 1
-  },
- {
-    lletra: '¡Y que olvides tu apellido!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Si te pido un beso ven dámelo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Yo sé que estás pensándolo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Llevo tiempo intentándolo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Mami, estoy dando y dándolo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Sabes que tu corazón conmigo te hace bom bom!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Sabes que esa beba está buscando de mi bom bom!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Ven prueba de mi boca para ver como te sabe!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero, quiero, quiero ver cuaánto amor a ti te cabe!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Yo no tengo prisa, yo me quiero dar el viaje!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Empecemos lento, después salvaje!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Pasito a pasito, suave suavecito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Nos vamos pegando, poquito a poquito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Cuando tú me besas con esa destreza!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Veo que eres malicia con delicadeza!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Pasito a pasito, suave suavecito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Nos vamos pegando, poquito a poquito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Y es que esa belleza es un rompecabezas!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Pero pa montarlo aquí tengo la pieza!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Oye!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Des-pa-cito!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Quiero respirar tu cuello despacito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Deja que te diga cosas al oído!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Para que te acuerdes si no estás conmigo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Des-pa-cito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero desnudarte a besos despacito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Firmo en las paredes de tu laberinto!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Y hacer de tu cuerpo todo un manuscrito!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Sube, sube, sube!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Sube, sube!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero ver bailar tu pelo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Quiero ser tu ritmo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Que le enseñes a mi boca!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Tus lugares favoritos!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Déjame sobrepasar tus zonas de peligro!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Hasta provocar tus gritos!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Y que olvides tu apellido!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Des-pa-cito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Vamos a hacerlo en una playa en Puerto Rico!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Hasta que las olas griten "¡Ay, Bendito!"!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Para que mi sello se quede contigo!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Pasito a pasito, suave suavecito!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Nos vamos pegando, poquito a poquito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Que le enseñes a mi boca!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Tus lugares favoritos!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Pasito a pasito, suave suavecito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Nos vamos pegando, poquito a poquito!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Hasta provocar tus gritos!',
-    temps: 47,
-    tempsPintar: 1
-  }, {
-    lletra: '¡Y que olvides tu apellido!',
-    temps: 47,
-    tempsPintar: 1
-   }, {
-    lletra: '¡Des-pa-cito!',
-    temps: 47,
-    tempsPintar: 1
-  }
-];
-var kitipasa;
+function Get(yourUrl) {
+  var Httpreq = new XMLHttpRequest(); // a new request
+  Httpreq.open("GET", yourUrl, false);
+  Httpreq.send(null);
+  return Httpreq.responseText;
+}
+
+var canso = JSON.parse(Get('/js/despasito.json'));
 var pasa = false;
 var width = 0;
 var musica = document.getElementById('despacito');
+var musicaDemo = document.getElementById('musicaDemo');
 var progressBar = document.getElementById('barTime');
 var placholdTime = document.getElementById('placeBarTime');
 var time = document.getElementById('timing');
 var play = document.getElementById('playArrow');
+var playDemo = document.getElementById('playDemo');
 var restart = document.getElementById('restart');
 var video = document.getElementById('video');
+var forward = document.getElementById('forward');
+var rewind = document.getElementById('rewind');
+var tempsPintar = canso[0].tempsPintar;
+var tempsEliminar = canso[0].temps;
+var contador = 0;
+var comencar = false;
+var haClicat = false;
+var indexAlQueEstem = 0;
+// funcio per tal d'obtenir l'index amb el cual es troba dins de la canso i poder anar sincronitzats
+function obtenirIndex() {
+  for (var i = 0; i < canso.length; i++) {
+    if (musica.currentTime > canso[i].temps && musica.currentTime < canso[i].tempsFinal) {
+      indexAlQueEstem = i;
+    }
+  }
+  return indexAlQueEstem;
+}
+
+function test() {
+  var frases = document.getElementsByClassName("comuna");
+  var phrase = document.getElementById('test');
+  var phraseColor = document.getElementById('printLetter');
+  var place = document.getElementById('placeholder');
+  console.log(obtenirIndex());
+  if (musica.currentTime > canso[contador].temps && musica.currentTime < canso[contador].tempsFinal) {
+    //al ser true es posa en marxa el pinta lletra en el setInterval
+    comencar = true;
+  }
+  if (musica.currentTime > canso[contador].tempsFinal) {
+    //eliminem la frase i incrementem el contador
+    phrase.value = frases[contador].innerHTML;
+    phraseColor.value = frases[contador].innerHTML;
+    place.innerHTML = frases[contador].innerHTML;
+    $("p:eq(" + contador + ")").slideUp();
+    //al ser true tornem a definir al width de pintar lletra a 0
+    pasa = true;
+    contador++;
+  }
+
+}
 window.onload = function() {
 
+  video.loop = false;
+  console.log(playDemo)
+  if (play != null) {
     play.addEventListener("click", function() {
       if (musica.paused) {
         musica.play();
@@ -371,168 +74,221 @@ window.onload = function() {
         video.pause();
       }
       pasa = true;
-      var phrase = document.getElementById('test');
-      phrase.value = canso[0].lletra;
-      var linia = document.getElementById('actualFrase');
-      var phraseColor = document.getElementById('printLetter');
-      phraseColor.value = canso[0].lletra;
-      linia.setAttribute("class", "test1 mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-focused");
+      // solament ho volem fer el primer cop que es quan ha de carregar tota la lletra i tal,un altre cop es un problema, d'aqui ve el boolean per solucionar-lo!
+      if (haClicat === false) {
+        var phrase = document.getElementById('test');
+        phrase.value = canso[0].lletra;
+        var linia = document.getElementById('actualFrase');
+        var phraseColor = document.getElementById('printLetter');
+        phraseColor.value = canso[0].lletra;
+        linia.setAttribute("class", "test1 mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-focused");
 
-      for (var i = 1; i < canso.length; i++) {
-        var p = document.createElement("p");
-        p.setAttribute('class', 'comuna test1');
-        p.setAttribute('id', canso[i].id);
-        var text = document.createTextNode(canso[i].lletra);
-        p.appendChild(text);
-        var div = document.getElementById("lletraCanso");
-        div.appendChild(p);
+        for (var i = 1; i < canso.length; i++) {
+          var p = document.createElement("p");
+          p.setAttribute('class', 'comuna test1');
+          p.setAttribute('id', canso[i].id);
+          var text = document.createTextNode(canso[i].lletra);
+          p.appendChild(text);
+          var div = document.getElementById("lletraCanso");
+          div.appendChild(p);
+
+        }
       }
+      haClicat = true;
     })
-
+  }
+  if (restart != null) {
     restart.addEventListener("click", function() {
       musica.currentTime = 0;
+      video.currentTime = 0;
       musica.play();
       video.play();
-      video.currentTime = 0;
     })
+  }
 
-    function animateWidth() {
-      if (!musica.paused) {
-        var inputC = document.getElementById('printLetter');
-        width = width + 1;
-        inputC.style.width = width + "px";
-        //console.log(inputC.style.width);
-        if (pasa == true) {
-          width = 0;
-          pasa = false;
-        }
+  if (playDemo != null) {
+    playDemo.addEventListener("click", function() {
+      if (musicaDemo.paused) {
+
+        musicaDemo.currentTime = musicaDemo.duration / 2;
+        musicaDemo.play();
+
+        document.getElementById('jeje').innerHTML = 'pause';
+      } else {
+        document.getElementById('jeje').innerHTML = 'play_arrow';
+        musicaDemo.pause();
       }
+    })
+  }
 
-    }
 
-    function phraseForward() {
-      if (!musica.paused) {
-        var frases = document.getElementsByClassName("comuna");
-        //console.log(frases);
-        for (var i = 0; i < frases.length; i++) {
-          if (i == 0) {
-            // console.log(frases[i]);
-            var phrase = document.getElementById('test');
-            var phraseColor = document.getElementById('printLetter');
-            phrase.value = frases[i].innerHTML;
-            phraseColor.value = frases[i].innerHTML;
-            var place = document.getElementById('placeholder');
-            place.innerHTML = frases[i].innerHTML;
-            frases[i].remove();
-            pasa = true;
-          }
-        }
+  if (forward != null) {
+    forward.addEventListener("click", function() {
+      if (musica.currentTime + 5 > musica.duration) {
+        musica.currentTime = musica.duration;
+        video.currentTime = musica.duration;
+      } else {
+        musica.currentTime = musica.currentTime + 5;
+        video.currentTime = video.currentTime + 5;
+
       }
+    })
+  }
 
-    }
+  if (rewind != null) {
+    rewind.addEventListener("click", function() {
+      if (musica.currentTime < 5) {
+        musica.currentTime = 0;
+        video.currentTime = 0;
+      } else {
+        musica.currentTime = musica.currentTime - 5;
+        video.currentTime = video.currentTime - 5;
 
+      }
+    })
+  }
 
-
-    function colorirBarra() {
-      if (!musica.paused) {
-        progressBar.setAttribute('value', musica.currentTime);
-        var min = 0;
-        var interval = 0;
-        var maxInterval = 60;
-        if (musica.currentTime > maxInterval) {
-          maxInterval = maxInterval + 60;
-          interval = interval + 60;
-          min++;
-        }
-
-        var d = Number(musica.currentTime);
-        var m = Math.floor(d % 3600 / 60);
-        var s = Math.floor(d % 3600 % 60);
-        if (s.length == 2) {
-          s = "0" + s.toString();
-        }
-        m = m.toString();
-        s = s.toString();
-        if (m.length < 1) {
-          m = "00";
-        }
-        if (m.length == 1) {
-          m = "0" + m;
-        }
-        if (s.length < 2) {
-          s = "0" + s;
-        }
-
-        var temps = m + ":" + s;
-        time.innerHTML = temps + "-04:41";
+  function animateWidth() {
+    if (!musica.paused && comencar == true) {
+      var inputC = document.getElementById('printLetter');
+      width = width + 1;
+      inputC.style.width = width + "px";
+      //console.log(inputC.style.width);
+      if (pasa == true) {
+        width = 0;
+        pasa = false;
       }
     }
+
+  }
+
+  function phraseForward() {
+    if (!musica.paused) {
+      var frases = document.getElementsByClassName("comuna");
+      //console.log(frases);
+      for (var i = 0; i < frases.length; i++) {
+
+        if (i == 0) {
+          contador++;
+
+          // console.log(frases[i]);
+          var phrase = document.getElementById('test');
+          var phraseColor = document.getElementById('printLetter');
+          phrase.value = frases[i].innerHTML;
+          phraseColor.value = frases[i].innerHTML;
+          var place = document.getElementById('placeholder');
+          place.innerHTML = frases[i].innerHTML;
+          frases[i].remove();
+          pasa = true;
+        }
+      }
+    }
+
+  }
+
+
+
+  function colorirBarra() {
+    if (!musica.paused) {
+      progressBar.setAttribute('value', musica.currentTime);
+      var min = 0;
+      var interval = 0;
+      var maxInterval = 60;
+      if (musica.currentTime > maxInterval) {
+        maxInterval = maxInterval + 60;
+        interval = interval + 60;
+        min++;
+      }
+
+      var d = Number(musica.currentTime);
+      var m = Math.floor(d % 3600 / 60);
+      var s = Math.floor(d % 3600 % 60);
+      if (s.length == 2) {
+        s = "0" + s.toString();
+      }
+      m = m.toString();
+      s = s.toString();
+      if (m.length < 1) {
+        m = "00";
+      }
+      if (m.length == 1) {
+        m = "0" + m;
+      }
+      if (s.length < 2) {
+        s = "0" + s;
+      }
+
+      var temps = m + ":" + s;
+      time.innerHTML = temps + "-04:41";
+    }
+  }
 
   progressBar.addEventListener("click", function(event) {
+    var duration = musica.duration;
+    var posCanso = event.offsetX / this.offsetWidth * duration;
+    musica.currentTime = posCanso;
+    video.currentTime = posCanso;
+    haClicat = true;
+    var equisde = obtenirIndex();
+    contador = equisde;
+    var phrase = document.getElementById('test');
+    var phraseColor = document.getElementById('printLetter');
+    var place = document.getElementById('placeholder');
+    if(equisde!==0){
+      phrase.value = canso[equisde-1].lletra;
+      phraseColor.value = canso[equisde-1].lletra;
+      place.innerHTML = canso[equisde-1].lletra;  
+    }else{
+      phrase.value = canso[equisde].lletra;
+      phraseColor.value = canso[equisde].lletra;
+      place.innerHTML = canso[equisde].lletra;
+    }
+    
+    for(var i=0; i<equisde; i++){
+      $("p:eq("+i+")").hide();
+    }
+    for (equisde; equisde < canso.length; equisde++) {
+      $("p:eq(" + equisde + ")").show();
+    }
+    
+  });
+  progressBar.addEventListener("mousemove", function(event) {
       var duration = musica.duration;
       var posCanso = event.offsetX / this.offsetWidth * duration;
-      musica.currentTime = posCanso;
-      video.currentTime = posCanso;
-    });
+      var m = Math.floor(posCanso % 3600 / 60);
+      var s = Math.floor(posCanso % 3600 % 60);
+      if (s.length == 2) {
+        s = "0" + s.toString();
+      }
+      m = m.toString();
+      s = s.toString();
+      if (m.length < 1) {
+        m = "00";
+      }
+      if (m.length == 1) {
+        m = "0" + m;
+      }
+      if (s.length < 2) {
+        s = "0" + s;
+      }
+
+      var temps = m + ":" + s;
+      placholdTime.innerHTML = temps;
+    })
     //AKI HI PASAREM EL TEMPS DE CANVIAR DE LINIA ☻
-    setInterval(phraseForward, 5000);
+    //setInterval(phraseForward, 10000);
     //AKI HI PASAREM EL TEMPS DE PINTAR
-    setInterval(animateWidth, 10);
-    setInterval(colorirBarra);
-  }
-progressBar.addEventListener("mousemove",function(event){
-  var duration = musica.duration;
-  var posCanso = event.offsetX / this.offsetWidth * duration;
-  var m = Math.floor(posCanso % 3600 / 60);
-        var s = Math.floor(posCanso % 3600 % 60);
-        if (s.length == 2) {
-          s = "0" + s.toString();
-        }
-        m = m.toString();
-        s = s.toString();
-        if (m.length < 1) {
-          m = "00";
-        }
-        if (m.length == 1) {
-          m = "0" + m;
-        }
-        if (s.length < 2) {
-          s = "0" + s;
-        }
+  setInterval(animateWidth, 10);
+  setInterval(colorirBarra);
 
-        var temps = m + ":" + s;
-  placholdTime.innerHTML=temps;
-})
-//document.addEventListener("mousemove", test);
-  /* var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#polina button");
-
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
 }
 
-function vidFade() {
-  vid.classList.add("stopfade");
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
 }
 
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
-
-
-pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-  } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-  }
-})*/
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}

@@ -18,7 +18,7 @@
   <div id="p1" style="display: table;margin: auto;top: 100px;height: 20px;" class="mdl-progress ">
    
     <div style="display: table;margin: auto;"> 
-       <a href="menu.html">MENU TEST</a>
+      <button onclick="location.href='menu.html';" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">home</i> </button>
       <button  id="rewind" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_rewind</i> </button> 
       <button  id="playArrow" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i id="jeje" class="material-icons">play_arrow</i> </button>      
       <button  id="forward" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">fast_forward</i> </button> 
@@ -27,8 +27,10 @@
     <div id="placeBarTime" class="mdl-tooltip" for="barTime">
     
     </div>
+   
+    
   <div id="container" style="display: table;margin: auto;padding-top: 50px;">
-    <div class="demo-card-wide mdl-card mdl-shadow--8dp" style="width: 700px;height: 400px;">
+    <div  class="demo-card-wide mdl-card mdl-shadow--8dp" style="width: 700px;height: 400px; background-color:rgba(255,255,255,0.7);">
       <div class="mdl-card__title" style="display: block;">
         <h2 class="mdl-card__title-text">Títol Canço</h2> </div>
       <div class="mdl-card__supporting-text"> Imatge de fons de la canço i temps actual ?? </div>
@@ -43,7 +45,7 @@
     </div>
   </div>
         
- <video  id="video" playsinline muted loop>
+ <video  id="video" playsinline muted>
  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 <source src="/video/suavesito.mp4" type="video/mp4">
 </video>

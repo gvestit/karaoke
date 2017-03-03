@@ -4,7 +4,9 @@
   font-weight: bold;
   color: black;
 }
-
+.center{
+  text-align: center;
+}
 .test1 {
   font-family: verdana;
   font-size: 18px;

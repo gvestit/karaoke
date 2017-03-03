@@ -16,31 +16,31 @@
   </audio>
       <div>
          <div class="demo-list-action mdl-list">
-  <div class="mdl-list__item">
-    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp " style="opacity: 0.4;">
-      <thead>
+  <div class="mdl-list__item" style="margin-top: 150px;">
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp " style="background-color: rgba(255,255,255,0.5);display: table;margin: auto;padding-top: 50px;">
+      <thead >
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Name</th>
-      <th>Image</th>
+      <th class="center">Image</th>
       <th>Level</th>
-        <th>PLAY</th>
+      <th>PLAY</th>
       <th>SING</th>
     </tr>
   </thead>
   <tbody>
-    <tr>   
+    <tr onmouseover="pintar(this)">   
       <td class="mdl-data-table__cell--non-numeric">Despasito</td>
-      <td><span><img  src="/images/descarga.jpg"></href></span></td>
+      <td ><img src="/images/descarga.jpg"></td>
       <td><a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a> <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a></td>
       <td> <button  id="playDemo" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i id="jeje" class="material-icons">play_arrow</i> </button>   </td>    
       <td><a href="index.html"><button  id="Sing" style="margin-right: 10px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button-- mdl-shadow--4dp"> <i class="material-icons">mic</i></span></button></a></td>
     </tr>
-    <tr>
+    <tr >
       <td class="mdl-data-table__cell--non-numeric">Eminem</td>
       <td>XXX</td>
       <td><a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a> <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a><a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a> <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a><a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a> <a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></a></td>
     </tr>
-    <tr>
+    <tr >
       <td class="mdl-data-table__cell--non-numeric">La la la la</td>
       <td>XXXX</td>
       <td><a class="mdl-list__item-secondary-action"><i class="material-icons">star</i></td>
@@ -50,7 +50,7 @@
   </div>
 </div>
   </div>
-<video  id="video" playsinline autoplay muted loop>
+<video  playsinline autoplay muted loop >
 <source src="/video/intro.mp4" type="video/mp4">
 </video>
   <script src="js/motor.js">

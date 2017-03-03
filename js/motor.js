@@ -32,6 +32,7 @@ function obtenirIndex() {
       indexAlQueEstem = i;
     }
   }
+  
   return indexAlQueEstem;
 }
 
@@ -59,7 +60,6 @@ function test() {
 }
 window.onload = function() {
 
-  video.loop = false;
   console.log(playDemo)
   if (play != null) {
     play.addEventListener("click", function() {
@@ -73,13 +73,14 @@ window.onload = function() {
         musica.pause();
         video.pause();
       }
-      pasa = true;
       // solament ho volem fer el primer cop que es quan ha de carregar tota la lletra i tal,un altre cop es un problema, d'aqui ve el boolean per solucionar-lo!
       if (haClicat === false) {
         var phrase = document.getElementById('test');
         phrase.value = canso[0].lletra;
         var linia = document.getElementById('actualFrase');
         var phraseColor = document.getElementById('printLetter');
+        var place = document.getElementById('placeholder');
+        place.innerHTML = canso[0].lletra;
         phraseColor.value = canso[0].lletra;
         linia.setAttribute("class", "test1 mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-focused");
 
@@ -103,6 +104,16 @@ window.onload = function() {
       video.currentTime = 0;
       musica.play();
       video.play();
+      for(var i=0; i< canso.length;i++){
+        $("p:eq(" + i + ")").show();
+      }
+      var phrase = document.getElementById('test');
+        phrase.value = canso[0].lletra;
+        var linia = document.getElementById('actualFrase');
+        var phraseColor = document.getElementById('printLetter');
+        var place = document.getElementById('placeholder');
+        place.innerHTML = canso[0].lletra;
+        phraseColor.value = canso[0].lletra;
     })
   }
 
@@ -124,27 +135,45 @@ window.onload = function() {
 
   if (forward != null) {
     forward.addEventListener("click", function() {
-      if (musica.currentTime + 5 > musica.duration) {
-        musica.currentTime = musica.duration;
-        video.currentTime = musica.duration;
-      } else {
-        musica.currentTime = musica.currentTime + 5;
-        video.currentTime = video.currentTime + 5;
-
+      var index = 0;
+      musica.currentTime = musica.currentTime + 5;
+      video.currentTime = video.currentTime + 5;
+      for (var i = 0; i < canso.length; i++) {
+        if (musica.currentTime > canso[i].tempsFinal) {
+          index = 0;
+        }
       }
+
     })
   }
 
   if (rewind != null) {
     rewind.addEventListener("click", function() {
-      if (musica.currentTime < 5) {
-        musica.currentTime = 0;
-        video.currentTime = 0;
+      var index = 0;
+      musica.currentTime = musica.currentTime - 5;
+      video.currentTime = video.currentTime - 5;
+      var equisde = obtenirIndex();
+      contador = equisde;
+      var phrase = document.getElementById('test');
+      var phraseColor = document.getElementById('printLetter');
+      var place = document.getElementById('placeholder');
+      if (equisde !== 0) {
+        phrase.value = canso[equisde - 1].lletra;
+        phraseColor.value = canso[equisde - 1].lletra;
+        place.innerHTML = canso[equisde - 1].lletra;
       } else {
-        musica.currentTime = musica.currentTime - 5;
-        video.currentTime = video.currentTime - 5;
-
+        phrase.value = canso[equisde].lletra;
+        phraseColor.value = canso[equisde].lletra;
+        place.innerHTML = canso[equisde].lletra;
       }
+
+      for (var i = 0; i < equisde; i++) {
+        $("p:eq(" + i + ")").hide();
+      }
+      for (equisde; equisde < canso.length; equisde++) {
+        $("p:eq(" + equisde + ")").show();
+      }
+      width = 0;
     })
   }
 
@@ -234,23 +263,23 @@ window.onload = function() {
     var phrase = document.getElementById('test');
     var phraseColor = document.getElementById('printLetter');
     var place = document.getElementById('placeholder');
-    if(equisde!==0){
-      phrase.value = canso[equisde-1].lletra;
-      phraseColor.value = canso[equisde-1].lletra;
-      place.innerHTML = canso[equisde-1].lletra;  
-    }else{
+    if (equisde !== 0) {
+      phrase.value = canso[equisde - 1].lletra;
+      phraseColor.value = canso[equisde - 1].lletra;
+      place.innerHTML = canso[equisde - 1].lletra;
+    } else {
       phrase.value = canso[equisde].lletra;
       phraseColor.value = canso[equisde].lletra;
       place.innerHTML = canso[equisde].lletra;
     }
-    
-    for(var i=0; i<equisde; i++){
-      $("p:eq("+i+")").hide();
+
+    for (var i = 0; i < equisde; i++) {
+      $("p:eq(" + i + ")").hide();
     }
     for (equisde; equisde < canso.length; equisde++) {
       $("p:eq(" + equisde + ")").show();
     }
-    
+
   });
   progressBar.addEventListener("mousemove", function(event) {
       var duration = musica.duration;
@@ -278,6 +307,7 @@ window.onload = function() {
     //AKI HI PASAREM EL TEMPS DE CANVIAR DE LINIA ☻
     //setInterval(phraseForward, 10000);
     //AKI HI PASAREM EL TEMPS DE PINTAR
+
   setInterval(animateWidth, 10);
   setInterval(colorirBarra);
 
@@ -291,4 +321,8 @@ function bigImg(x) {
 function normalImg(x) {
   x.style.height = "32px";
   x.style.width = "32px";
+}
+
+function pintar(element) {
+  element.setAttribute("style", "opacity:1;");
 }

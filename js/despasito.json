@@ -20,7 +20,7 @@
          "tempsFinal": 33
       },
       {
-         "lletra": "Oh no, oh no...",
+         "lletra": "Oh no,               oh no...",
          "temps": 34,
          "tempsFinal": 37
       },
@@ -42,11 +42,11 @@
       {
          "lletra": "¡Go!",
          "temps": 41,
-         "tempsFinal": 41
+         "tempsFinal": 42
       },
       {
          "lletra": "¡Sí, sabes que ya llevo rato mirándote!",
-         "temps": 41,
+         "temps": 42,
          "tempsFinal": 46
       },
       {
@@ -55,9 +55,9 @@
          "tempsFinal": 50
       },
       {
-         "lletra": "¡Daddy Yankee!",
-         "temps": 47,
-         "tempsFinal": 1
+         "lletra": "¡DY!",
+         "temps": 51,
+         "tempsFinal":52 
       },
       {
          "lletra": "¡Vi que tu mirada ya estaba llamándome!",
@@ -337,96 +337,96 @@
       {
          "lletra": "¡Quiero ser tu ritmo!",
          "temps": 196,
-         "tempsFinal": 19
+         "tempsFinal": 198
       },
       {
          "lletra": "¡Que le enseñes a mi boca!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 198,
+         "tempsFinal": 200
       },
       {
          "lletra": "¡Tus lugares favoritos!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 200,
+         "tempsFinal": 203
       },
       {
          "lletra": "¡Déjame sobrepasar tus zonas de peligro!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 205,
+         "tempsFinal": 208
       },
       {
          "lletra": "¡Hasta provocar tus gritos!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 209,
+         "tempsFinal":211
       },
       {
          "lletra": "¡Y que olvides tu apellido!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 212,
+         "tempsFinal": 214
       },
       {
          "lletra": "¡Des-pa-cito!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 215,
+         "tempsFinal": 216
       },
       {
          "lletra": "¡Vamos a hacerlo en una playa en Puerto Rico!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 217,
+         "tempsFinal": 219
       },
       {
          "lletra": "¡Hasta que las olas griten \"¡Ay, Bendito!\"!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 220,
+         "tempsFinal": 221
       },
       {
          "lletra": "¡Para que mi sello se quede contigo!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 222,
+         "tempsFinal": 224
       },
       {
          "lletra": "¡Pasito a pasito, suave suavecito!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 226,
+         "tempsFinal": 228
       },
       {
          "lletra": "¡Nos vamos pegando, poquito a poquito!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 229,
+         "tempsFinal": 231
       },
       {
          "lletra": "¡Que le enseñes a mi boca!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 231,
+         "tempsFinal": 232
       },
       {
          "lletra": "¡Tus lugares favoritos!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 233,
+         "tempsFinal": 235
       },
       {
          "lletra": "¡Pasito a pasito, suave suavecito!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 237,
+         "tempsFinal": 239
       },
       {
          "lletra": "¡Nos vamos pegando, poquito a poquito!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 240,
+         "tempsFinal": 242
       },
       {
          "lletra": "¡Hasta provocar tus gritos!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 242,
+         "tempsFinal": 244
       },
       {
          "lletra": "¡Y que olvides tu apellido!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 245,
+         "tempsFinal": 246
       },
       {
          "lletra": "¡Des-pa-cito!",
-         "temps": 47,
-         "tempsFinal": 1
+         "temps": 247,
+         "tempsFinal": 249
       }
 ]

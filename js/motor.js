@@ -8,6 +8,7 @@ function Get(yourUrl) {
 var canso = JSON.parse(Get('/js/despasito.json'));
 var pasa = false;
 var width = 0;
+var tempsRefresh = 30;
 var musica = document.getElementById('despacito');
 var musicaDemo = document.getElementById('musicaDemo');
 var progressBar = document.getElementById('barTime');
@@ -36,12 +37,36 @@ function obtenirIndex() {
   return indexAlQueEstem;
 }
 
+function animateWidth() {
+    if (!musica.paused && comencar == true) {
+      
+      var inputNoVisible = document.getElementById('fraseNoVisible');
+      var positionInfoNovisible = inputNoVisible.clientWidth;
+    
+
+      
+      var inputC = document.getElementById('printLetter');
+      var positionInfo = inputC.getBoundingClientRect();
+      
+      width = width + 1;
+      inputC.style.width = width + "px";
+      if (pasa == true) {
+        width = 0;
+        pasa = false;
+      }
+    }
+
+  }
+
 function test() {
   var frases = document.getElementsByClassName("comuna");
   var phrase = document.getElementById('test');
+ 
   var phraseColor = document.getElementById('printLetter');
   var place = document.getElementById('placeholder');
-  console.log(obtenirIndex());
+  var indx = obtenirIndex();
+ 
+
   if (musica.currentTime > canso[contador].temps && musica.currentTime < canso[contador].tempsFinal) {
     //al ser true es posa en marxa el pinta lletra en el setInterval
     comencar = true;
@@ -51,6 +76,8 @@ function test() {
     phrase.value = frases[contador].innerHTML;
     phraseColor.value = frases[contador].innerHTML;
     place.innerHTML = frases[contador].innerHTML;
+    
+
     $("p:eq(" + contador + ")").slideUp();
     //al ser true tornem a definir al width de pintar lletra a 0
     pasa = true;
@@ -60,7 +87,6 @@ function test() {
 }
 window.onload = function() {
 
-  console.log(playDemo)
   if (play != null) {
     play.addEventListener("click", function() {
       if (musica.paused) {
@@ -135,72 +161,97 @@ window.onload = function() {
 
   if (forward != null) {
     forward.addEventListener("click", function() {
-      var index = 0;
-      musica.currentTime = musica.currentTime + 5;
-      video.currentTime = video.currentTime + 5;
-      for (var i = 0; i < canso.length; i++) {
-        if (musica.currentTime > canso[i].tempsFinal) {
-          index = 0;
+      var index = obtenirIndex();
+      if(index < canso.length){
+        if(index === 0){
+          if(musica.currentTime > canso[index].temps && musica.currentTime < canso[index].tempsFinal){
+             index = index+1;
+          }else{
+            index = 0;
+          }
+        }else{
+           index = index+1;
         }
+       musica.currentTime = canso[index].temps;
+       video.currentTime = canso[index].temps;
       }
-
     })
   }
 
   if (rewind != null) {
     rewind.addEventListener("click", function() {
       var index = 0;
-      musica.currentTime = musica.currentTime - 5;
-      video.currentTime = video.currentTime - 5;
-      var equisde = obtenirIndex();
-      contador = equisde;
+      //musica.currentTime = musica.currentTime - 5;
+      //video.currentTime = video.currentTime - 5;
+      var indexT = obtenirIndex();
+      contador = indexT;
+      
+      
+      if(indexT == 0){
+         musica.currentTime = 0;
+         video.currentTime = 0;
+      }else{
+        indexT = indexT -1;
+        musica.currentTime = canso[indexT].temps;
+        video.currentTime = canso[indexT].temps;
+      }
+      
+       
+      
       var phrase = document.getElementById('test');
       var phraseColor = document.getElementById('printLetter');
       var place = document.getElementById('placeholder');
-      if (equisde !== 0) {
-        phrase.value = canso[equisde - 1].lletra;
-        phraseColor.value = canso[equisde - 1].lletra;
-        place.innerHTML = canso[equisde - 1].lletra;
+      if (indexT !== 0) {
+        phrase.value = canso[indexT].lletra;
+        phraseColor.value = canso[indexT].lletra;
+        place.innerHTML = canso[indexT].lletra;
       } else {
-        phrase.value = canso[equisde].lletra;
-        phraseColor.value = canso[equisde].lletra;
-        place.innerHTML = canso[equisde].lletra;
+      
+        phrase.value = canso[indexT].lletra;
+        phraseColor.value = canso[indexT].lletra;
+        place.innerHTML = canso[indexT].lletra;
       }
+      var indexAct = indexT
 
-      for (var i = 0; i < equisde; i++) {
+      for (var i = 0; i < indexT; i++) {
         $("p:eq(" + i + ")").hide();
       }
-      for (equisde; equisde < canso.length; equisde++) {
-        $("p:eq(" + equisde + ")").show();
+      for (indexT; indexT < canso.length; indexT++) {
+        $("p:eq(" + indexT + ")").show();
       }
       width = 0;
+        var phrase = document.getElementById('test');
+        phrase.value = canso[indexAct].lletra;
+        var linia = document.getElementById('actualFrase');
+        var phraseColor = document.getElementById('printLetter');
+        var place = document.getElementById('placeholder');
+        place.innerHTML = canso[indexAct].lletra;
+        phraseColor.value = canso[indexAct].lletra;
+        linia.setAttribute("class", "test1 mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded is-focused");
+
+        for (var j = indexT; j < canso.length; j++) {
+          var p = document.createElement("p");
+          p.setAttribute('class', 'comuna test1');
+          p.setAttribute('id', canso[j].id);
+          var text = document.createTextNode(canso[j].lletra);
+          p.appendChild(text);
+          var div = document.getElementById("lletraCanso");
+          div.appendChild(p);
+
+        }
     })
   }
 
-  function animateWidth() {
-    if (!musica.paused && comencar == true) {
-      var inputC = document.getElementById('printLetter');
-      width = width + 1;
-      inputC.style.width = width + "px";
-      //console.log(inputC.style.width);
-      if (pasa == true) {
-        width = 0;
-        pasa = false;
-      }
-    }
-
-  }
+  
 
   function phraseForward() {
     if (!musica.paused) {
       var frases = document.getElementsByClassName("comuna");
-      //console.log(frases);
       for (var i = 0; i < frases.length; i++) {
 
         if (i == 0) {
           contador++;
 
-          // console.log(frases[i]);
           var phrase = document.getElementById('test');
           var phraseColor = document.getElementById('printLetter');
           phrase.value = frases[i].innerHTML;
@@ -258,26 +309,26 @@ window.onload = function() {
     musica.currentTime = posCanso;
     video.currentTime = posCanso;
     haClicat = true;
-    var equisde = obtenirIndex();
-    contador = equisde;
+    var indexT = obtenirIndex();
+    contador = indexT;
     var phrase = document.getElementById('test');
     var phraseColor = document.getElementById('printLetter');
     var place = document.getElementById('placeholder');
-    if (equisde !== 0) {
-      phrase.value = canso[equisde - 1].lletra;
-      phraseColor.value = canso[equisde - 1].lletra;
-      place.innerHTML = canso[equisde - 1].lletra;
+    if (indexT !== 0) {
+      phrase.value = canso[indexT - 1].lletra;
+      phraseColor.value = canso[indexT - 1].lletra;
+      place.innerHTML = canso[indexT - 1].lletra;
     } else {
-      phrase.value = canso[equisde].lletra;
-      phraseColor.value = canso[equisde].lletra;
-      place.innerHTML = canso[equisde].lletra;
+      phrase.value = canso[indexT].lletra;
+      phraseColor.value = canso[indexT].lletra;
+      place.innerHTML = canso[indexT].lletra;
     }
 
-    for (var i = 0; i < equisde; i++) {
+    for (var i = 0; i < indexT; i++) {
       $("p:eq(" + i + ")").hide();
     }
-    for (equisde; equisde < canso.length; equisde++) {
-      $("p:eq(" + equisde + ")").show();
+    for (indexT; indexT < canso.length; indexT++) {
+      $("p:eq(" + indexT + ")").show();
     }
 
   });
@@ -308,7 +359,7 @@ window.onload = function() {
     //setInterval(phraseForward, 10000);
     //AKI HI PASAREM EL TEMPS DE PINTAR
 
-  setInterval(animateWidth, 10);
+  setInterval(animateWidth, 12);
   setInterval(colorirBarra);
 
 }

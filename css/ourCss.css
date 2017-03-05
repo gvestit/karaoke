@@ -7,6 +7,10 @@
 .center{
   text-align: center;
 }
+.mdl-data-table{
+    padding: 0 18px 12px 18px;
+    text-align: center;
+}
 .test1 {
   font-family: verdana;
   font-size: 18px;
